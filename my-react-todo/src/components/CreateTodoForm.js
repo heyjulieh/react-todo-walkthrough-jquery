@@ -24,8 +24,6 @@ class CreateTodoForm extends Component {
     todo: ''
     })
   }
-
-
     render(){
     return (
       <div className='createForm todoForm'>

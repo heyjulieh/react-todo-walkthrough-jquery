@@ -6,6 +6,10 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+#trashicon {
+  height: 20px;
+}
+
 header, .todos {
   text-align: center
 }
