@@ -6,7 +6,7 @@ Client-side routing isn't strictly necessary for this application. However, clie
 
 This Todo app will have two urls or application-states (not to be confused with component states): the root url (`/`) and a url to view all todos (`/todos`).
 
-There is a lot to learn about React Router, and we'll just be scratching the surface. 
+There is a lot to learn about React Router, and we'll just be scratching the surface.
 
 
 ### Creating Routes
@@ -30,8 +30,8 @@ import React from 'react'
 import {Route} from 'react-router'
 import App from '../App'
 
-module.exports = (
-  <Route path='/' component={App}/>
+export default (
+  <Route path='/' component={App} />
 )
 ```
 
@@ -132,7 +132,7 @@ export default App
 
 
 
-6. Add a line to `src/App.js` to actually import the `Header` component: 
+6. Add a line to `src/App.js` to actually import the `Header` component:
 
 ```js
 import Header from './components/Header'
