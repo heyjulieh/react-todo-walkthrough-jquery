@@ -130,8 +130,6 @@ export default App
 5. Check your page again - what has changed?  Why? Once you carefully read any error messages, move on to the next step!
 
 
-
-
 6. Add a line to `src/App.js` to actually import the `Header` component:
 
 ```js

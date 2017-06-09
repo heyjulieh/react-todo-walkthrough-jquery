@@ -1,6 +1,6 @@
 ## Sprint 2: Containers and Nested Components
 
-React components should be FIRST: 
+React components should be FIRST:
 
 - focused,  
 - independent,   
@@ -12,7 +12,7 @@ In order to help keep components small, a good practice is to move the business 
 
 The goal of this sprint is to create a container component to manage the app's list of todos and the logic around them. This component will be what shows when the user is on the `/todos` route.  It will start out very simple like the `Header` component, but it will end up much more complex.
 
-The `TodosContainer` component will eventually contain a list of todos and the form to create new todos. 
+The `TodosContainer` component will eventually contain a list of todos and the form to create new todos.
 
 1. Inside `src`, create a `containers` folder and then a file for the Todo container component:
 
@@ -46,7 +46,7 @@ export default TodosContainer
 // which file does this belong in?
 import TodosContainer from '../containers/TodosContainer'
 
-module.exports = (
+export default (
   <Route path='/' component={App}>
     <Route path='/todos' component={TodosContainer}/>
   </Route>
@@ -74,7 +74,7 @@ render() {
 
 > Note that the `Route` for `/todos` is nested within the `Route` for `'/'`.  That's why `this.props.children` for the `App` component will include the TodosContainer from the `/todos` route.
 
-7. Check the page in the browser again. 
+7. Check the page in the browser again.
 
 ### Style Break!
 
