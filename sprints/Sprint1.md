@@ -43,7 +43,7 @@ export default (
 
 > Without the `{}`, the import it would have grabbed all of `react-router` functionality. Check out the [react router v3 source code](https://github.com/ReactTraining/react-router/tree/v3) to see `Route` and other modules within `react-router`.
 
-4. The `src/config/routes.js` file sets up a route, but it's not connected to any of the app's other files yet.  Referencing the code below, update `index.js` to use React Router now instead of just rendering the `App` Component.
+5. The `src/config/routes.js` file sets up a route, but it's not connected to any of the app's other files yet.  Referencing the code below, update `index.js` to use React Router now instead of just rendering the `App` Component.
 
 
 ```js
@@ -59,10 +59,10 @@ ReactDOM.render(
 );
 ```
 
-5. Think critically about the code above. What is it doing? How can you find out about less familiar pieces like the `Router` and `browserHistory` modules?
+6. Think critically about the code above. What is it doing? How can you find out about less familiar pieces like the `Router` and `browserHistory` modules?
 
 
-6. If everything is connected correctly, you  should still see the hello world header showing when you visit the route you set up!
+7. If everything is connected correctly, you  should still see the hello world header showing when you visit the route you set up!
 
 
 
