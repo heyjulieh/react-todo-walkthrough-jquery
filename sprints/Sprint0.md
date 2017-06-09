@@ -1,10 +1,14 @@
 ## Sprint 0: Getting Started
 
-Create the React app. 
+Create the React app.
 
 ```bash
 $ create-react-app my-react-todo
 $ cd my-react-todo
+$ git init
+$ git add .
+$ git commit -m "initial commit"
+$ npm start
 ```
 
 Navigate to [`localhost:3000`](http://localhost:3000) to see the boilerplate `create-react-app` React application.
@@ -23,7 +27,7 @@ $ rm src/logo.svg
 
 > At this point, there are probably errors in the browser letting you know some of those files are still used. The next step will help resolve those errors.
 
-2. Modify the code inside the `return` block from `src/App.js` so that it returns JSX for a header with the text Hello World. 
+2. Modify the code inside the `return` block from `src/App.js` so that it returns JSX for a header with the text Hello World.
 
 Also, remove the lines that reference for `'./App.css'` and `'src/logo.svg'`.  The whole file should look like this:
 
@@ -46,4 +50,4 @@ export default App;
 
 3. Switch over to your browser to automatically see the updates.
 
-> The `create-react-app` command installs and sets up a lot of useful tools.  A tool called `webpack` manages automatic re-rendering files change!  
+> The `create-react-app` command installs and sets up a lot of useful tools.  A tool called `webpack` manages automatic re-rendering when files change!  
