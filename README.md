@@ -3,7 +3,7 @@
 ## Learning Objectives
 - Build a todo app in React that persists with a backend
 - Use React Router to deep link
-- Use axios promise library to retrieve data from a back end
+- Use AJAX to retrieve data from a back end
 - Pass state from parent components to children as props
 - Pass state from children components to their parents as arguments to functions
 
@@ -21,8 +21,6 @@ Components should do one thing and do it well.
 
 Resist the temptation to pack too much information into a component. As you progress you will get a better sense of how to minimize component code.
 
-> Think back to the Post component from the intro's class.
-
 #### Independent
 
 Components should increase cohesion and reduce coupling.
@@ -30,8 +28,6 @@ Components should increase cohesion and reduce coupling.
 Behavior in one component should not impact the behavior of another.
 
 In other words, components should rely on each other as little as possible.
-
-> But they should compliment one another, just like our Comment component did for Post in the intro's class.
 
 #### Reusable
 
@@ -54,7 +50,7 @@ We're going to be building this application from scratch!
 
 If you get behind, refer back to these notes.
 
-Pay attention to the error messages you'll get in terminal and in the chrome dev tools. Errors from React are usually very accurate and helpful, so please utilize them.
+Pay attention to the error messages you'll get in terminal and in the Chrome dev tools. Errors from React are usually very accurate and helpful, so please utilize them.
 
 Think critically about code snippets. Some of them will be repetitions, to reiterate important points. Some of them will update existing files. Some will have brand new content, and you'll add the entire snippet to your project.
 
