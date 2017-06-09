@@ -6,7 +6,7 @@ React relies on third party libraries to fetch data.
 
 There are a lot of choices for which AJAX tools to use. Options include:
 
-- [Axios](https://github.com/mzabriskie/axios), a promise-based HTTP client for the browser and node.
+- [Axios](https://github.com/mzabriskie/axios), a Promise-based HTTP client for the browser and node.
 
 - [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch), a new vanilla JavaScript web API available through most browsers
 
@@ -14,7 +14,7 @@ There are a lot of choices for which AJAX tools to use. Options include:
 
 - [jQuery](https://jquery.com/), which includes a `$.ajax` method for AJAX requests.
 
-> Since we're already familiar with jQuery, we'll use it here.  However, we won't need the entire jQuery library - React is going to handle DOM interactions for us.  Downloading the entire jQuery library would be a lot of extra space, so we'll use the `jquery-ajax` npm package, which just has `$.ajax` and other related jQuery functions.
+Since we're already familiar with jQuery, we'll use it here.  However, we won't need the entire jQuery library - React is going to handle DOM interactions for us.  Downloading the entire jQuery library would be a lot of extra space, so we'll use the `jquery-ajax` npm package, which just has `$.ajax` and other related jQuery functions.
 
 ### Set Up Model File Structure
 
