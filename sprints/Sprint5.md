@@ -25,12 +25,9 @@ class Todo extends Component {
 
 2. When the `span` with the `X` gets clicked, it calls `this.props.onDeleteTodo`. The parent component of `Todo` will need to pass `.onDeleteTodo` into the `Todo` component. Briefly consider -- what is the parent component of `Todo`?
 
-3. In the `TodoList` class, send `this.props.onDeleteTodo` to each `Todo` component that rendered by the list.
+3. In the `TodoList` class, send `this.props.onDeleteTodo` to each `Todo` component that is rendered by the list.
 
-```js
-
-// src/components/TodoList.js
-// ...
+```javascript
 class TodoList extends Component {
   render(){
     let todoArray = this.props.todos.map( (todo) => {
@@ -41,9 +38,6 @@ class TodoList extends Component {
           onDeleteTodo={this.props.onDeleteTodo} />
       )
     })
-
-// ...
-
 ```
 
 4. One level further up, in the `TodoContainer` class, create a `deleteTodo` method and pass it into the `TodoList` component.
