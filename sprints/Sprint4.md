@@ -172,7 +172,7 @@ render(){
     <div className="todosComponent">
       <CreateTodoForm
         createTodo={this.createTodo.bind(this)} />
-      <Todos
+      <TodoList
         todos={this.state.todos} />
     </div>
   )
