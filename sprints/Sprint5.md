@@ -27,7 +27,7 @@ class Todo extends Component {
 
 3. In the `TodoList` class, send `this.props.onDeleteTodo` to each `Todo` component that is rendered by the list.
 
-```javascript
+```js
 class TodoList extends Component {
   render(){
     let todoArray = this.props.todos.map( (todo) => {
@@ -70,7 +70,7 @@ render(){
 // ...
 static delete(todo){
   let request = $.ajax({
-    url: "https://super-crud.herokuapp.com/todos",
+    url: `https://super-crud.herokuapp.com/todos/${todo}`,
     method: 'DELETE'
   })
   return request
