@@ -36,7 +36,7 @@ class CreateTodoForm extends Component {
 export default CreateTodoForm
 ```
 
-2. Add a `CreateTodoForm` component to the `TodosContainer` component's `render` method.
+2. Add a `CreateTodoForm` component to the `TodosContainer` component's `render` method. (Don't forget to import the `CreateTodoForm` as well!)
 
 ```js
 render(){
@@ -57,9 +57,9 @@ render(){
 ```js
 // inside src/components/CreateTodoForm.js
 class CreateTodoForm extends Component {
-  constructor(){
+  constructor(props){
     // use Component's constructor
-    super()
+    super(props)
     // set initial state
     this.state = {
       todo: ''
@@ -82,7 +82,7 @@ class CreateTodoForm extends Component {
 }
 ```
 
-5. Use the code below to add an `onChange` event handler to the `input` text box:
+5. Use the code below to add an `onChange` event handler to the `input` text box that will call the yet-to-be-written `onInputChange` method:
 
 ```jsx
 <input
@@ -92,7 +92,6 @@ class CreateTodoForm extends Component {
   value={this.state.todo} />
 ```
 
-> `onChange` is reserved JSX to define an event for an input change, almost identical to `ng-change` in angular
 
 6. Think critically about the code above. What kind of value is the JSX going to add in for the `onChange` attribute?
 
@@ -135,6 +134,7 @@ Hint: for an example of setting state, you can reference the `TodosContainer` cl
 ```js
 onFormSubmit(event){
   console.log('form submitted')
+  // this line keeps the page from refreshing!
   event.preventDefault()
   let newTodo = this.state.todo
   this.props.createTodo(newTodo)
@@ -144,7 +144,6 @@ onFormSubmit(event){
 }
 ```
 
-> `onSubmit` is reserved JSX to define an event for form submission, almost identical to `ng-submit` in angular
 
 > You **should** see an error in your browser console.
 
@@ -158,6 +157,7 @@ onFormSubmit(event){
 
 ### Todo Creation & AJAX
 
+> In order to pass data from the `CreateTodoForm` up to the `TodosContainer`, it needs some way of communicating with the `TodosContainer`. We will make that happen by providing the `CreateTodoForm` with a function to call with that updated data; that function will come from `TodosContainer` so that we can set it up to update that container correctly.
 
 1. Since `createTodo` is an attribute of a `CreateTodoForm` component's `prop`, it needs to be supplied by the parent component. Update the `src/containers/TodosContainer.js` to pass a `createTodo` function into the form component:
 
@@ -183,7 +183,7 @@ render(){
 
 > The `render` method for `TodosContainer` passes the `createTodo` function of the container component TO the `CreateTodoForm` component.
 
-> The `bind(this)` portion of the code means the `createTodo` function will use THIS `TodosContainer` component as `this`, even if it's called from a different part of the code (like it will be, inside `CreateTodoForm`'s `onFormSubmit` method).
+> The `bind(this)` portion of the code means the `createTodo` function will use THIS `TodosContainer` component as `this`, even though it's called from a different part of the code (inside `CreateTodoForm`'s `onFormSubmit` method).
 
 
 3. The `createTodo` method should use the todo body passed in to make an AJAX request to the server.  AJAX is the role of the `TodoModel` class, though, so add a static `create` method to that model class.
