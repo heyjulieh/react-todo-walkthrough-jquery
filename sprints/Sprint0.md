@@ -15,12 +15,17 @@ Navigate to [`localhost:3000`](http://localhost:3000) to see the boilerplate `cr
 
 ### Step 1: Hello World
 
-1. Remove files you won't need for this demo app. Specifically, remove the following files from the `src` folder:
+1. Our app won't require all of the files that `create-react-app` builds, so we'll start by removing files you won't need for this demo app. Remove the following files from the `src` folder:
 
 ```bash
 $ rm src/App.css
 $ rm src/App.test.js
 $ rm src/logo.svg
+```
+or just run
+
+```bash
+$ rm src/App.css src/App.test.js src/logo.svg
 ```
 
 > You could also remove the favicon; just make sure you remove the reference to it from `index.html` as well.
@@ -50,4 +55,4 @@ export default App;
 
 3. Switch over to your browser to automatically see the updates.
 
-> The `create-react-app` command installs and sets up a lot of useful tools.  A tool called `webpack` manages automatic re-rendering when files change!  
+> The `create-react-app` command installs and sets up a lot of useful tools.  A tool called `webpack` manages automatic re-rendering when files change!  Take 5 minutes to research what webpack is for and when it's useful.
