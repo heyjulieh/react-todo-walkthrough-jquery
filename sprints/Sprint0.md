@@ -55,4 +55,4 @@ export default App;
 
 3. Switch over to your browser to automatically see the updates.
 
-> The `create-react-app` command installs and sets up a lot of useful tools.  A tool called `webpack` manages automatic re-rendering when files change!  Take 5 minutes to research what webpack is for and when it's useful.
+> The `create-react-app` command installs and sets up a lot of useful tools.  A tool called `webpack` manages automatic re-rendering when files change!  Take 5 minutes to research what `webpack` is for and when it's useful.
